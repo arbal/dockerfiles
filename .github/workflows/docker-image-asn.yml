@@ -1,10 +1,14 @@
-name: Docker Image CI - asn
+name: Docker Image CI
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'asn/'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'asn/'
 
 jobs:
 
