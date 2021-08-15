@@ -1,0 +1,18 @@
+name: Docker Image CI - shell2http-buster
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build shell2http/. --file Dockerfile --tag shell2http-buster:$(date +%s)
