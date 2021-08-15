@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build shell2http/. --file Dockerfile --tag shell2http-buster:$(date +%s)
+      run: docker build shell2http --file Dockerfile --tag shell2http-buster:$(date +%s)
